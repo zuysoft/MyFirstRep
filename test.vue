@@ -46,7 +46,7 @@
                                 v-for="button in template.buttons.selectButton"
                                 :class="button.class"
                                 :key="button.label"
-                                :href="button.action === 'href' ? button.path : null"
+                               
                                 @click="button.confirmation ? showModal(button) : doAction(button)"
                                 v-on="on">
                                 <span class="is-hidden-mobile">
@@ -79,7 +79,7 @@
                     v-for="button in infoTemp"
                     :class="button.class"
                     :key="button.label"
-                    :href="button.action === 'href' ? button.path : null"
+                  
                     @click="button.confirmation ? showModal(button) : doAction(button)"
                      >
                     <span class="is-hidden-mobile">
@@ -239,8 +239,6 @@ export default {
                 console.log(button.path)
                  this.$emit('export-newtab', button.path);
                 return;
-                //let routeData = this.$router.resolve({name: button.path, query: {data: "someData"}});
-               // window.open(routeData.href, '_blank');
             }
         },
     },
