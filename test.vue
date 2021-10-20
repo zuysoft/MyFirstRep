@@ -195,7 +195,7 @@ export default {
         hasFilter() {
             const symbolsLength = Object.getOwnPropertySymbols(this.filters);
             const withoutSymbolLength = Object.keys(this.filters);
-            const length = symbolsLength + withoutSymbolLength;
+            const length = symbolsLength + Object.keys(this.filters);
             return length;
         },
         infoTemp: function () {
